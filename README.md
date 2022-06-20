@@ -1,1 +1,1 @@
-# -D-connvolutional-Neural-network
+# 1D-connvolutional-Neural-network
