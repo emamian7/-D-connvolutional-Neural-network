@@ -8,13 +8,11 @@ def import_dataset():
     (X_train, y_train), (X_test, y_test) = keras.datasets.imdb.load_data(num_words=top_words)
     return X_train, X_test, y_train, y_test
 
-
 # Pad the sequences to the same length
 def preprocess_data(X_train, X_test):
     new_X_train = keras.preprocessing.sequence.pad_sequences(X_train, maxlen=max_review_length)
     new_X_test = keras.preprocessing.sequence.pad_sequences(X_test, maxlen=max_review_length)
     return new_X_train, new_X_test
-
 
 def create_model():
     # Using embedding from Keras
